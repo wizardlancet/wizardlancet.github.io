@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <title>骰子</title>
+        <link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link href="//cdn.bootcss.com/bootstrap-slider/9.4.1/css/bootstrap-slider.css" rel="stylesheet">
+        <script src="//cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+        <script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="//cdn.bootcss.com/bootstrap-slider/9.4.1/bootstrap-slider.min.js"></script>
+        <script src="https://cdn.bootcss.com/underscore.js/1.8.3/underscore-min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    </head>
+</head>
+<body>
+<div id="main-container" class="container">
+    <div class="btn-group" role="group" aria-label="...">
+        <button type="button" class="btn btn-default" dice="2">D2</button>
+        <button type="button" class="btn btn-default" dice="3">D3</button>
+        <button type="button" class="btn btn-default" dice="4">D4</button>
+        <button type="button" class="btn btn-default" dice="6">D6</button>
+        <button type="button" class="btn btn-default" dice="8">D8</button>
+        <button type="button" class="btn btn-default" dice="10">D10</button>
+        <button type="button" class="btn btn-default" dice="20">D20</button>
+        <button type="button" class="btn btn-default" dice="100">D100</button>
+    </div>
+    <div>
+        <label for="custom-dice">自定义:</label>
+        <input type="text" id="custom-dice">
+        <button type="button" class="btn btn-default" id="custom-btn">投掷</button>
+    </div>
+    <div id="result-box">
+        <span id="result"></span>
+    </div>
+</div>
+</body>
+<script>
+
+    show_dice_result = function (d,r) {
+        $('#result').text('D'+d + '投掷结果: '+ r);
+        $('#result').fadeOut().fadeIn();
+    };
+    throw_dice = function (d) {
+        r = Math.ceil(Math.random()*d);
+        show_dice_result(d,r);
+    };
+    buttons = $('.btn-group button');
+    for(var i = 0;i<buttons.length;i++){
+        b = buttons[i];
+        d = parseInt(b.getAttribute('dice'));
+        b.onclick = function (dice) {
+            return function(){throw_dice(dice)}
+        }(d);
+    }
+
+    $('#custom-btn')[0].onclick = function (ev) {
+        var custom_d = parseInt($('#custom-dice')[0].value);
+        console.log(custom_d);
+        throw_dice(custom_d);
+    }
+
+
+</script>
+</html>
