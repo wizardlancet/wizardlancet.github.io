@@ -1,0 +1,15 @@
+{{ define "body-class" }}
+    article-page
+{{ end }}
+
+{{ define "main" }}
+    <article class="main-article">
+        {{ partial "article/components/content" . }}
+    </article>
+
+    {{- partial "footer/footer" . -}}
+{{ end }}
+
+{{ define "right-sidebar" }}
+    {{ partial "sidebar/right.html" (dict "Context" . "Scope" "homepage") }}
+{{ end }}

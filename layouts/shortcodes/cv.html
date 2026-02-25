@@ -1,0 +1,31 @@
+<!-- CV Shortcode -->
+{{ $data := index .Site.Data "cv" }}
+{{ with $data }}
+<h3>Education</h3>
+<ul>
+{{ range $item := .education }}
+<li><strong>{{ $item.degree }}</strong>, {{ $item.institution }} ({{ $item.year }})</li>
+{{ end }}
+</ul>
+
+<h3>Experience</h3>
+<ul>
+{{ range $item := .experience }}
+<li><strong>{{ $item.position }}</strong>, {{ $item.institution }} ({{ $item.year }})</li>
+{{ end }}
+</ul>
+
+<h3>Awards</h3>
+<ul>
+{{ range $item := .awards }}
+<li><strong>{{ $item.name }}</strong> ({{ $item.year }})</li>
+{{ end }}
+</ul>
+
+<h3>Service</h3>
+<ul>
+{{ range $item := .service }}
+<li><strong>{{ $item.role }}</strong>, {{ $item.venue }} ({{ $item.year }})</li>
+{{ end }}
+</ul>
+{{ end }}

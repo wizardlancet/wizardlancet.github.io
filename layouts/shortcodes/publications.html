@@ -1,0 +1,158 @@
+<!-- Publications Shortcode -->
+{{/*
+  Usage: {{< publications >}} - shows all with tag filter buttons
+         {{< publications tag="AI for Healthcare" >}} - shows only specific tag
+*/}}
+
+{{ $data := index .Site.Data "publications" }}
+{{ $tag := .Get "tag" }}
+
+{{ with $data }}
+{{ $sorted := sort . "year" "desc" }}
+
+{{/* Collect all unique tags */}}
+{{ $allTags := slice }}
+{{ range $pub := $sorted }}
+  {{ range $t := $pub.tags }}
+    {{ if not (in $allTags $t) }}
+      {{ $allTags = $allTags | append $t }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{/* Show filter buttons if multiple tags and no specific tag requested */}}
+{{ if and (gt (len $allTags) 1) (not $tag) }}
+<div class="pub-filters">
+  <button class="filter-btn active" data-filter="all">All</button>
+  {{ range $t := $allTags }}
+    <button class="filter-btn" data-filter="{{ $t | urlize }}">{{ $t }}</button>
+  {{ end }}
+</div>
+{{ end }}
+
+<div class="publications-container" id="publicationsList">
+{{ $lastYear := 0 }}
+{{ $firstYear := true }}
+
+{{ range $pub := $sorted }}
+  {{/* Filter by tag if specified */}}
+  {{ $show := true }}
+  {{ if $tag }}
+    {{ $show = false }}
+    {{ range $pub.tags }}
+      {{ if eq . $tag }}{{ $show = true }}{{ end }}
+    {{ end }}
+  {{ end }}
+
+  {{ if $show }}
+    {{ if ne $pub.year $lastYear }}
+      {{ if not $firstYear }}</ul></div>{{ end }}
+      <h3 class="pub-year">{{ $pub.year }}</h3>
+      <div class="pub-year-section">
+      <ul class="pub-list">
+      {{ $firstYear = false }}
+      {{ end }}
+
+    <li class="pub-item" {{ if not $tag }}data-tags="{{ range $i, $t := $pub.tags }}{{ if $i }},{{ end }}{{ $t | urlize }}{{ end }}"{{ end }}>
+      {{/* Title first */}}
+      <div class="pub-title">{{ $pub.title }}.</div>
+
+      {{/* Authors logic:
+           - If total authors <= 12: show all
+           - If total authors > 12: show up to my position (inclusive), then et al.
+      */}}
+      {{ $authorLen := len $pub.authors }}
+
+      {{/* Find my position in the author list */}}
+      {{ $myIndex := -1 }}
+      {{ range $i, $author := $pub.authors }}
+        {{ $authorClean := replaceRE "[*]" "" $author }}
+        {{ $authorNorm := lower (replaceRE "[^A-Za-z]" "" $authorClean) }}
+        {{ if or (eq $authorNorm "wangzilong") (eq $authorNorm "wangz") }}
+          {{ $myIndex = $i }}
+        {{ end }}
+      {{ end }}
+
+      {{/* Determine how many authors to show */}}
+      {{ $showCount := $authorLen }}
+      {{ if gt $authorLen 12 }}
+        {{/* Long author list: show up to and including my name */}}
+        {{ if ge $myIndex 0 }}
+          {{ $showCount = add $myIndex 1 }}
+        {{ else }}
+          {{ $showCount = 3 }}
+        {{ end }}
+      {{ end }}
+
+      <div class="pub-authors">
+        {{ range $i, $author := $pub.authors }}
+          {{ if lt $i $showCount }}
+            {{ $authorClean := replaceRE "[*]" "" $author }}
+            {{ $authorNorm := lower (replaceRE "[^A-Za-z]" "" $authorClean) }}
+            {{ $isMe := or (eq $authorNorm "wangzilong") (eq $authorNorm "wangz") }}
+
+            {{ if $isMe }}<strong>{{ $author }}</strong>{{ else }}{{ $author }}{{ end }}{{ if and (ne $i (sub $showCount 1)) (lt $i (sub $authorLen 1)) }}, {{ end }}
+          {{ end }}
+        {{ end }}
+
+        {{ if gt $authorLen $showCount }}, et al.{{ end }}
+      </div>
+
+      {{/* Venue and year */}}
+      <div class="pub-venue">
+        <em>{{ $pub.venue }}</em>, {{ $pub.year }}
+        {{ with $pub.url }} · <a href="{{ . }}">Link</a>{{ end }}
+        {{ with $pub.doi }} · <a href="https://doi.org/{{ . }}">DOI</a>{{ end }}
+      </div>
+    </li>
+
+    {{ $lastYear = $pub.year }}
+  {{ end }}
+{{ end }}
+</ul></div>
+</div>
+
+{{/* JavaScript for filtering */}}
+{{ if and (gt (len $allTags) 1) (not $tag) }}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const filters = document.querySelectorAll('.filter-btn');
+  const sections = document.querySelectorAll('.pub-year-section');
+  const years = document.querySelectorAll('.pub-year');
+
+  filters.forEach(btn => {
+    btn.addEventListener('click', function() {
+      const filter = this.dataset.filter;
+
+      // Update active button
+      filters.forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+
+      // Filter by tag
+      sections.forEach((section, idx) => {
+        const items = section.querySelectorAll('.pub-item');
+        let hasVisible = false;
+        items.forEach(item => {
+          if (filter === 'all') {
+            item.style.display = '';
+            hasVisible = true;
+          } else {
+            const tags = (item.dataset.tags || '').split(',');
+            if (tags.includes(filter)) {
+              item.style.display = '';
+              hasVisible = true;
+            } else {
+              item.style.display = 'none';
+            }
+          }
+        });
+        section.style.display = hasVisible ? '' : 'none';
+        years[idx].style.display = hasVisible ? '' : 'none';
+      });
+    });
+  });
+});
+</script>
+{{ end }}
+
+{{ end }}

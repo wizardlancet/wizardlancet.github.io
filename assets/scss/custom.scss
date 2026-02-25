@@ -1,0 +1,110 @@
+.article-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--line-color);
+
+    a {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--accent-color);
+        text-decoration: none;
+        max-width: 45%;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .nav-prev {
+        margin-right: auto;
+    }
+
+    .nav-next {
+        margin-left: auto;
+        text-align: right;
+    }
+
+    .nav-text {
+        font-size: 2rem;
+    }
+
+    .nav-icon {
+        font-size: 2rem;
+    }
+}
+
+/* Publications compact style */
+.pub-year {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.3rem;
+}
+
+/* Publications tag filter */
+.pub-filters {
+    margin-bottom: 1.5rem;
+
+    .filter-btn {
+        display: inline-block;
+        padding: 0.6rem 1.2rem;
+        margin: 0.4rem;
+        border: 1px solid var(--line-color);
+        border-radius: 4px;
+        background: transparent;
+        color: var(--text-color);
+        cursor: pointer;
+        font-size: 1.5rem;
+        transition: all 0.2s;
+
+        &:hover {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        &.active {
+            background: var(--accent-color);
+            color: white;
+            border-color: var(--accent-color);
+        }
+    }
+}
+
+.pub-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+
+    .pub-item {
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+
+        .pub-title {
+            font-weight: 600;
+            font-size: 1.5rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .pub-authors {
+            font-size: 1.5rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .pub-venue {
+            font-size: 1.5rem;
+            color: var(--muted-color);
+
+            a {
+                color: var(--accent-color);
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

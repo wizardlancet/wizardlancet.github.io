@@ -1,1 +1,23 @@
 .instruction.md
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Hugo
+public/
+resources/
+.cache/
+
+# IDE
+.idea/
+.vscode/
+*.sublime-*
+
+# Build
+*.min.js
+*.min.css
+
+# Local Hugo
+hugo.exe

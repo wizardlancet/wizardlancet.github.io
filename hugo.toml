@@ -1,0 +1,78 @@
+baseURL = 'https://wizardlancet.github.io/'
+languageCode = 'en-us'
+title = 'WizardLancet'
+theme = 'stack'
+
+[[social]]
+identifier = "github"
+name = "GitHub"
+url = "https://github.com/wizardlancet"
+
+[social.params]
+icon = "brand-github"
+
+[languages]
+[languages.en]
+languageName = 'English'
+languageCode = 'en-US'
+weight = 1
+title = 'WizardLancet'
+
+[languages.zh]
+languageName = '中文'
+languageCode = 'zh-CN'
+weight = 2
+title = 'WizardLancet'
+
+[params]
+description = 'Researcher | Developer | Blog'
+author = 'WizardLancet'
+
+[params.comments]
+enable = false
+
+[params.header]
+mode = 'auto'
+
+[params.footer]
+since = 2026
+
+[params.sri]
+disable = true
+
+[params.search]
+enable = true
+
+[params.widgets]
+homepage = [
+  #{ type = "search" },
+  #{ type = "archives" },
+  { type = "categories" },
+  { type = "tag-cloud", params = { limit = 10 } },
+]
+list = [
+  #{ type = "search" },
+  #{ type = "archives" },
+  { type = "categories" },
+  { type = "tag-cloud", params = { limit = 10 } },
+]
+page = [
+  { type = "toc" },
+  #{ type = "archives" },
+  { type = "categories" },
+  { type = "tag-cloud", params = { limit = 10 } },
+]
+
+[params.scrollappear]
+enable = true
+
+[params.posts]
+dateFormat = '2006-01-02'
+
+[params.DateFormat]
+published = '2006-01-02'
+
+[taxonomies]
+category = 'categories'
+tag = 'tags'
+series = 'series'
