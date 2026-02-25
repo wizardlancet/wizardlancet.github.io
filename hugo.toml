@@ -1,4 +1,4 @@
-baseURL = 'https://wizardlancet.github.io/'
+baseURL = 'https://wizardlancet.tech/'
 languageCode = 'en-us'
 title = 'WizardLancet'
 theme = 'stack'
