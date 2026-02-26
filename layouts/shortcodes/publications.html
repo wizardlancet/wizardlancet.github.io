@@ -59,7 +59,9 @@
 
       {{/* Authors logic:
            - If total authors <= 12: show all
-           - If total authors > 12: show up to my position (inclusive), then et al.
+           - If total authors > 12:
+               - If my name is within first 12: show 12, then et al.
+               - If my name is after 12: show up to my position (inclusive), then et al.
       */}}
       {{ $authorLen := len $pub.authors }}
 
@@ -76,11 +78,12 @@
       {{/* Determine how many authors to show */}}
       {{ $showCount := $authorLen }}
       {{ if gt $authorLen 12 }}
-        {{/* Long author list: show up to and including my name */}}
-        {{ if ge $myIndex 0 }}
+        {{ if and (ge $myIndex 0) (gt $myIndex 11) }}
+          {{/* My name is after position 12 (index >= 12): show up to my position */}}
           {{ $showCount = add $myIndex 1 }}
         {{ else }}
-          {{ $showCount = 3 }}
+          {{/* My name is within first 12 or not found: show 12 */}}
+          {{ $showCount = 12 }}
         {{ end }}
       {{ end }}
 
