@@ -32,6 +32,16 @@ menu:
 
 **[2025年8月]** 我们发布两项医疗基础模型预印本成果：**RenalCLIP**（面向肾癌精准肿瘤学的视觉-语言基础模型）与 **DermINO**（基于多视图混合预训练策略的皮肤科通用基础模型）。
 
+
+## 开源项目
+
+**[OpenOE-Lite](https://github.com/wizardlancet/OpenOE-Lite)** —— [OpenEvidence](https://www.openevidence.com/) 风格循证医学问答系统的开源轻量级复现。仅需一个 LLM API key、零本地向量库、零语料处理，即可从 OpenAlex 的 2.5 亿篇开放学术文献中实时生成带引用对齐的循证回答。系统采用六阶段流水线（安全边界 → 三视角查询增强 → 多路检索 → RRF 去重排序 → 小模型证据门控 → 循证回答生成），模块化架构支持从 Lite 内核平滑升级至集成本地向量库与临床指南的完整 RAG。
+
+**[Anji-Bridge 安济桥](https://github.com/hai-team/Anji)** —— 一个面向 LLM/Agent 的 PDF → 知识桥梁，将 PDF 转换为适用于大模型与智能体的结构化、语义化 Markdown/JSON。采用 PaddleOCR-VL 进行版面感知的 OCR，结合 Ovis2.5-9B 视觉-语言模型进行图像理解与描述生成，并在 AST 层面完成标题纠错、装饰性元素过滤、多格式导出等增强，支持批量处理与 base64 嵌入的可携带输出。
+
+**[Mandarin Speech Prosody Benchmark (MSPB)](https://github.com/wizardlancet/chinese-speech-prosody-benchmark)** —— Interspeech 2025 论文《Can AI Understand Mandarin Speech Prosody?》的配套仓库。MSPB 是一个语言学驱动的普通话韵律理解评测基准，包含 178 条经人工录制与专家校验的测试语料，覆盖 8 类任务（语气/语调、韵律歧义、焦点标记、焦点算子、等级含义、反语、带/不带语境的情感韵律），系统性评估 Speech LLM 在音系、句法、语义、语用多个层面对韵律线索的理解能力。
+
+
 ## 联系方式
 
 * Email: wangzilong@microsoft.com

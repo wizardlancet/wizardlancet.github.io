@@ -33,6 +33,15 @@ Prior to joining MSRA in 2023, Dr. Wang served as CTO of medical technology star
 **[Aug. 2025]** We released preprints for two new medical foundation models: **RenalCLIP**, a disease-centric vision-language foundation model for precision oncology in kidney cancer, and **DermINO**, a dermatology foundation model based on a novel multi-view hybrid pretraining strategy for robust visual representation learning.
 
 
+## Featured Projects
+
+**[OpenOE-Lite](https://github.com/wizardlancet/OpenOE-Lite)** — An open-source, lightweight reproduction of [OpenEvidence](https://www.openevidence.com/)-style evidence-based medical Q&A. With just one LLM API key and zero local vector DB, it generates grounded, citation-aligned answers in real time from OpenAlex's 250M+ open academic works via a 6-stage pipeline (safety gate → 3-view query enhancement → multi-source retrieval → RRF dedup/rank → small-model evidence gating → grounded answer generation). The modular architecture supports smooth upgrade from the Lite core to a Full RAG with local vector DB and clinical guidelines.
+
+**[Anji-Bridge 安济桥](https://github.com/hai-team/Anji)** — A PDF → AI-agent knowledge bridge that converts PDFs into structured, semantic Markdown/JSON ready for LLMs and agents. Built on PaddleOCR-VL for layout-aware OCR and Ovis2.5-9B VLM for image understanding, with AST-level enhancement (heading correction, decorative element filtering, image captioning) and multi-format export. Supports batch processing and base64-embedded portable outputs.
+
+**[Mandarin Speech Prosody Benchmark (MSPB)](https://github.com/wizardlancet/chinese-speech-prosody-benchmark)** — The companion repository for our Interspeech 2025 paper *"Can AI Understand Mandarin Speech Prosody?"*. MSPB is a linguistically grounded benchmark with 178 phonetically recorded and expert-validated stimuli covering 8 prosody-related tasks (tone/intonation, prosodic ambiguity, focus marking, focus operators, scalar meaning, irony, emotional prosody with/without context). It systematically evaluates how Speech LLMs interpret prosodic cues across phonology, syntax, semantics, and pragmatics.
+
+
 ## Contact
 
 * Email: wangzilong@microsoft.com
