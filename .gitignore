@@ -21,3 +21,6 @@ resources/
 
 # Local Hugo
 hugo.exe
+
+# reference
+ref/

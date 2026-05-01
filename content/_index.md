@@ -22,6 +22,10 @@ Prior to joining MSRA in 2023, Dr. Wang served as CTO of medical technology star
 
 **[Feb. 2026]** We released **OMGs (Ovarian tumour Multidisciplinary intelligent aGent System)**, an LLM-powered multi-agent framework designed to support MDT decision-making across the ovarian tumor care continuum. In multicenter evaluations, OMGs achieved performance comparable to expert MDT consensus, demonstrating the potential of collaborative agentic AI systems in high-stakes clinical decision support.
 
+**[Jan. 2026]** Four papers accepted as **ICLR 2026 posters**, covering visual prompt tuning interpretability, multi-modal Alzheimer's disease diagnosis, reasoning-driven multimodal LLM for domain generalization, and a token-level fix for low-probability over-domination in RL for LLMs.
+
+**[Jan. 2026]** Three papers accepted to top-tier venues: **AAAI 2026** (medical foundation models for inner ear temporal CT analysis) and two **CHI 2026** papers on accessibility and human-AI interaction for screen reader users in the vibe coding era and computer use scenarios.
+
 **[Jan. 2026]** We introduced **GI-Bench**, a panoramic benchmark covering 20 fine-grained lesion categories to systematically evaluate Multimodal Large Language Models (MLLMs) across a five-stage gastrointestinal endoscopy clinical workflow, advancing clinically grounded evaluation of multimodal foundation models.
 
 **[Aug. 2025]** We open-sourced **Agent Lightning⚡**, a flexible framework that enables developers to train ANY AI agent with Reinforcement Learning (RL). By decoupling agent execution from model training, it supports seamless integration with existing frameworks such as LangChain, AutoGen, and CrewAI with minimal code modification.

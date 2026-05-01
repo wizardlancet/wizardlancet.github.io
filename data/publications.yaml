@@ -66,7 +66,7 @@
 
 - title: "Exploring interpretability for visual prompt tuning with cross-layer concepts"
   year: 2026
-  venue: "ICLR (OpenReview)"
+  venue: "ICLR 2026 (poster)"
   authors:
     - "Wang, Yubin"
     - "Jiang, Xinyang"
@@ -80,7 +80,7 @@
 
 - title: "Joint adaptation of uni-modal foundation models for multi-modal Alzheimer's disease diagnosis"
   year: 2026
-  venue: "ICLR (OpenReview)"
+  venue: "ICLR 2026 (poster)"
   authors:
     - "Gu, Wentao"
     - "Li, Yuquan"
@@ -95,7 +95,7 @@
 
 - title: "Reasoning-driven multimodal LLM for domain generalization"
   year: 2026
-  venue: "ICLR (OpenReview)"
+  venue: "ICLR 2026 (poster)"
   authors:
     - "Xu, Zhipeng"
     - "Wang, Zilong"
@@ -108,7 +108,7 @@
 
 - title: "Do not let low-probability tokens over-dominate in RL for LLMs"
   year: 2026
-  venue: "ICLR (OpenReview)"
+  venue: "ICLR 2026 (poster)"
   authors:
     - "Yang, Zhihe"
     - "Luo, Xufang"
@@ -120,9 +120,9 @@
   url: "https://openreview.net/forum?id=FOnAdLo0tM"
   tags: ["Foundation Models"]
 
-- title: "Screen Reader Programmers in the Vibe Coding Era: Adaptation, Empowerment, and New Accessibility Landscape"
+- title: "Programmers Who Use Screen Readers in the Vibe Coding Era: Adaptation, Empowerment, and New Accessibility Landscape"
   year: 2026
-  venue: "CHI"
+  venue: "CHI 2026"
   authors:
     - "Chen, Nan"
     - "Qiu, Luna K."
@@ -133,6 +133,79 @@
   arxiv: "2506.13270"
   doi: "10.48550/arXiv.2506.13270"
   tags: ["Human-AI Interaction"]
+
+- title: "From Struggle to Success: Context-Aware Guidance for Screen Reader Users in Computer Use"
+  year: 2026
+  venue: "CHI 2026"
+  authors:
+    - "Chen, Nan"
+    - "Lu, Jing"
+    - "Wang, Zilong"
+    - "Qiu, Luna K."
+    - "Chen, Siming"
+    - "Yang, Yuqing"
+  tags: ["Human-AI Interaction"]
+
+- title: "Tuning Medical Foundation Models for Inner Ear Temporal CT Analysis with Plug-and-play Domain Knowledge Aggregator"
+  year: 2026
+  venue: "AAAI 2026"
+  authors:
+    - "Wan, Weixun"
+    - "Jiang, Xinyang"
+    - "Wang, Zilong"
+    - "Li, Bei"
+    - "Zhao, Cairong"
+  tags: ["AI4Health", "Foundation Models"]
+
+- title: "EEGChaT: A Transformer-Based Modular Channel Selector for SEEG Analysis"
+  year: 2025
+  venue: "arXiv preprint arXiv:2510.13592"
+  authors:
+    - "Wang, Chen"
+    - "Wang, Yansen"
+    - "Han, Dongqi"
+    - "Wang, Zilong"
+    - "Li, Dongsheng"
+  url: "https://arxiv.org/abs/2510.13592"
+  arxiv: "2510.13592"
+  doi: "10.48550/arXiv.2510.13592"
+  tags: ["AI4Health", "Foundation Models"]
+
+- title: "Towards Ultra-low Framerate Ultrasound Localization Microscopy on Human Brain with Artificial Intelligence"
+  year: 2025
+  venue: "Preprint"
+  authors:
+    - "Jiang, Xinyang"
+    - "Zhong, Chuanyu"
+    - "Wan, Weixun"
+    - "Qu, Zefan"
+    - "Wang, Zilong"
+    - "Zhang, Xingxuan"
+    - "Xu, Xiang"
+    - "Wei, Linglin"
+    - "Sun, Dailin"
+    - "Wang, Yu"
+  tags: ["AI4Health"]
+
+- title: "Can AI Understand Mandarin Speech Prosody? A Framework and Benchmark Showcase"
+  year: 2025
+  venue: "Interspeech 2025"
+  authors:
+    - "Wang, Zilong"
+    - "Zhang, Xiaoxue"
+    - "Jiang, Xinyang"
+    - "Song, Kaitao"
+    - "Yu, Jue"
+  tags: ["Foundation Models", "Human-AI Interaction"]
+
+- title: "Segmentation Helps Understanding: Mask-Infused Vision-Language Pre-training for 3D Medical Images"
+  year: 2025
+  venue: "Preprint"
+  authors:
+    - "Hu, Yuqi"
+    - "Luo, Xufang"
+    - "Wang, Zilong"
+  tags: ["AI4Health", "Foundation Models"]
 
 - title: "A Disease-Centric Vision-Language Foundation Model for Precision Oncology in Kidney Cancer"
   year: 2025
@@ -320,9 +393,9 @@
   doi: "10.48550/arXiv.2404.00998"
   tags: ["AI4Health", "Foundation Models"]
 
-- title: "The Potential and Value of AI Chatbot in Personalized Cognitive Training"
+- title: "ReMe: Scaffolding Personalized Cognitive Training via Controllable LLM-Mediated Conversations"
   year: 2026
-  venue: "CHI poster"
+  venue: "CHI 2026 (LBW/poster)"
   authors:
     - "Wang, Zilong"
     - "Chen, Nan"
