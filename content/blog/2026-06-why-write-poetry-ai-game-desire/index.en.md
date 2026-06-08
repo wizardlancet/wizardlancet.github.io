@@ -151,23 +151,9 @@ One intersection of games and poetry is, for instance, the kind of bizarrely for
 >
 > 木兰替父从军去，马尔代夫旅行还。缘由此生，爱因斯坦。问道南山，盘尼西林。
 
-（注：以上为中文「无情对」，是一种依赖汉字音、形、平仄与对仗的文字游戏——上下句字字工对，语义却毫不相干，无法直译，故保留原文。以下为大意的英文转写。）
 
 *(Note: The above is a Chinese "ruthless couplet" — a wordplay that depends on the sound, shape, tonal pattern, and strict parallelism of Chinese characters: each character precisely matches its counterpart while the meanings stay utterly unrelated. It cannot be translated directly, so the original is kept. A rough English rendering of the gist follows.)*
 
-> *Brazil's Amazon; the Champion Marquis of the northern desert.*
->
-> *"Petting the cat" pairs with "the simping dog"; "snake's mouth" pairs with "dragon's head."*
->
-> *A sweep of streams and hills, beautiful through the ages; three rivers merge their waters, flowing for ten thousand years. Qin, se, pipa—and playing with a glass marble.*
->
-> *The sea of bitterness is boundless, yet turning back is the shore; Gandhi, by karmic fate, goes to Africa.*
->
-> *Fifth-rank sky-azure satin; the six-flavor rehmannia pill.*
->
-> *The round arch pairs with the carrying pole; "grain and fodder" pairs with Milan.*
->
-> *Mulan goes off to war in her father's stead; from the Maldives the traveler returns. The cause arises from this life—Einstein; seeking the Way at South Mountain—penicillin.*
 
 This strange textual landscape—seamlessly tight and supremely neat in form, yet utterly unrelated in semantic concept—stirs in the reader an exquisitely precise joy. This is not the degeneration of literary craft; it is the purest playfulness and carnival of rules and of the textual medium. Here language sheds the survival burden of being a pure "efficient tool," shakes off the mud from its information packet, and leaps gorgeously and arrogantly into the air, becoming an over-engineered playground that is the most senseless and yet utterly, supremely beautiful.
 
